@@ -1,0 +1,15 @@
+[Unit]
+Description=Deploy agent (pulls website updates from GitHub)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=deploy
+Group=deploy
+Environment=DEPLOY_AGENT_CONFIG=/etc/deploy-agent/config.json
+ExecStart=/usr/bin/python3 /opt/deploy-agent/deploy_agent.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
