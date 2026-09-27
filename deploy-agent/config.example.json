@@ -1,27 +1,7 @@
 {
   "listen_host": "127.0.0.1",
   "listen_port": 9000,
+  "public_url": "https://deploy.example.com",
   "admin_token": "change-me",
-  "projects": {
-    "my-site": {
-      "repo": "https://github.com/yorumainvalo0-crypto/my-site.git",
-      "branch": "main",
-      "path": "/var/www/my-site",
-      "auto_update": true,
-      "webhook_secret": "change-me",
-      "post_deploy": []
-    },
-    "my-app": {
-      "repo": "https://github.com/yorumainvalo0-crypto/my-app.git",
-      "branch": "main",
-      "path": "/var/www/my-app",
-      "auto_update": false,
-      "webhook_secret": "change-me",
-      "post_deploy": [
-        "npm ci",
-        "npm run build",
-        "sudo systemctl restart my-app"
-      ]
-    }
-  }
+  "projects": {}
 }

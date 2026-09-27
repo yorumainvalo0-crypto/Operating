@@ -7,7 +7,7 @@ Wants=network-online.target
 User=deploy
 Group=deploy
 Environment=DEPLOY_AGENT_CONFIG=/etc/deploy-agent/config.json
-ExecStart=/usr/bin/python3 /opt/deploy-agent/deploy_agent.py
+ExecStart=/usr/bin/python3 /opt/deploy-agent/deploy_agent.py serve
 Restart=on-failure
 RestartSec=5
 
